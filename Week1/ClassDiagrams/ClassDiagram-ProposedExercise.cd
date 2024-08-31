@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Alumno">
+    <Position X="1" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAACAUEAAAAEAAAAABAAAEhABAAAAIAAEAAgAE=</HashCode>
+      <FileName>Alumno.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Docente">
+    <Position X="3" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAUEAAAAEAQAABBAAAEgABAAAAAAEAAAIAE=</HashCode>
+      <FileName>Docente.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GestionDatos">
+    <Position X="6.75" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAQAAAAAAEAAEEQgEAAAgAAAAAACAAAAEFAA=</HashCode>
+      <FileName>GestionDatos.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Materia">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAACAAAABgAAAAAQAAAABEAAAAAAAABA=</HashCode>
+      <FileName>Materia.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
