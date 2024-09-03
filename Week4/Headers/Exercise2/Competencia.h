@@ -47,6 +47,15 @@ void Competencia::Iniciar()
 	bool iniciarcarrera = false;
 	char tecla;
 	MostrarCarros();
+	for (int i = 0; i < ALTO_CONSOLA; i++)
+	{
+		int x = ANCHO_CONSOLA;
+		int y = 0;
+		int color = 7;
+		Console::ForegroundColor = ConsoleColor(color);
+		Console::SetCursorPosition(x, y + i); cout << char(219);
+		Console::ResetColor();
+	}
 	while (!iniciarcarrera)
 	{
 		if (_kbhit())
