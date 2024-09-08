@@ -19,15 +19,15 @@ Alfa::Alfa() : Ovni(1.5, 19, 5)
 void Alfa::DibujarAlfa()
 {
 	Console::ForegroundColor = ConsoleColor(color);
-	Console::SetCursorPosition(this->x, this->y);
+	Console::SetCursorPosition(x, y);
 	cout << "      _.---._";
-	Console::SetCursorPosition(this->x, this->y + 1);
+	Console::SetCursorPosition(x, y + 1);
 	cout << "       .' '.";
-	Console::SetCursorPosition(this->x, this->y + 2);
+	Console::SetCursorPosition(x, y + 2);
 	cout << "_.-~===========~-._";
-	Console::SetCursorPosition(this->x, this->y + 3);
+	Console::SetCursorPosition(x, y + 3);
 	cout << "(_________________)";
-	Console::SetCursorPosition(this->x, this->y + 4);
+	Console::SetCursorPosition(x, y + 4);
 	cout << "     \\_______/";
 	Console::ResetColor();
 }
