@@ -170,7 +170,7 @@ void Controladora::VisualizarPromedioNotasEstudiantesSelecPasantes()
 	}
 }
 
-//void Controladora::VisualizarPromedioNotasEstudiantesSelecPasantes() //Para ingresar la nota minima y mostrar solo esos estudiantes que se convierten en pasantes
+//void Controladora::VisualizarPromedioNotasEstudiantesSelecPasantes() //Para ingresar el promedio minimo y mostrar solo esos estudiantes que se convierten en pasantes
 //{
 //	if (pasantes.empty())
 //	{
