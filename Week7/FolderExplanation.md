@@ -1,1 +1,1 @@
-# This week has the same exercises as week 6
+This week has the same exercises as week 6
