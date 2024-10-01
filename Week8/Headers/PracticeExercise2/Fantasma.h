@@ -13,7 +13,7 @@ public:
 	void Dibujar() override;
 };
 
-int seleColor[] = { 9,12 };
+int seleColor[2] = { 9,12 };
 
 Fantasma::Fantasma(float x, float y) : Figura(x, y, 7, 4) 
 {
