@@ -1,0 +1,66 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>300</x><y>0</y><w>240</w><h>230</h></coordinates><panel_attributes>Figura
+--
+x: float
+y: float
+ancho: int
+alto: int
+color: int
+--
+Figura(float x, float y, int ancho, int alto)
+Borrar(): void
+Dibujar(): virtual void
+Mover(): virtual void
+getX(): float
+getY(): float 
+getAncho(): int
+getAlto(): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>290</y><w>160</w><h>130</h></coordinates><panel_attributes>Pacman
+--
+dx: float
+dy: float
+velocidad: float
+--
+Pacman(float x, float y)
+Mover() override: void
+Dibujar() override: void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>290</y><w>160</w><h>120</h></coordinates><panel_attributes>Fantasma
+--
+dx: float
+velocidad: float
+--
+Fantasma(float x, float y)
+Mover() override: void
+Dibujar() override: void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>290</y><w>160</w><h>90</h></coordinates><panel_attributes>Pastilla
+--
+forma: char
+--
+Pastilla(float x, float y)
+Dibujar() override: void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>220</y><w>310</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>220</y><w>280</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;260;70</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>220</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>400</y><w>40</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=4</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>510</y><w>340</w><h>290</h></coordinates><panel_attributes>Juego
+--
+pacman: Pacman*
+pastillas: vector&lt;Pastilla*&gt;
+fantasmas: vector&lt;Fantasma*&gt;
+posicionesOcupadasX: vector&lt;float&gt;
+posicionesOcupadasY: vector&lt;float&gt;
+juegoTerminado: bool
+esPosicionOcupada(float x, float y, int ancho, int alto): bool
+agregarPosicion(float x, float y): void
+--
+Juego()
+~Juego()
+Iniciar(): void
+BorrarObjetos(): void
+MoverObjetos(): void
+DibujarObjetos(): void
+Colision(): void
+generarFantasma(): Fantasma*
+generarPastilla(): Pastilla*
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>410</y><w>300</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>280;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>370</y><w>270</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=4</panel_attributes><additional_attributes>10;130;250;10</additional_attributes></element></diagram>
