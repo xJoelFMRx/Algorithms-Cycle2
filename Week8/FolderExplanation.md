@@ -1,1 +1,1 @@
-This week contains practical content as there are midterm exams.
+This week contains practical content since there are midterm exams, in addition to the resolution of the midterm exam.

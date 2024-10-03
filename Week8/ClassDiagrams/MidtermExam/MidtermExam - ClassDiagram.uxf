@@ -1,0 +1,85 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>420</x><y>0</y><w>260</w><h>230</h></coordinates><panel_attributes>Entidad
+--
+x: float
+y: float
+ancho: int
+alto: int
+color: int
+--
+Entidad(float x, float y, int ancho, int alto)
+Borrar(): void
+Mover(): virtual void
+Dibujar(): virtual void
+getX(): float
+getY(): float
+getAncho(): int
+getAlto(): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>340</y><w>190</w><h>230</h></coordinates><panel_attributes>Caballero
+--
+dx: float
+dy: float
+velocidad: float
+vidas: int
+flechas: vector&lt;Arco*&gt;
+--
+Caballero(float x, float y)
+Mover() override: void
+Dibujar() override: void
+BorrarCaballero(): void
+Disparar(): void
+PerderVida(): void
+getVidas(): int
+getFlechas(): vector&lt;Arco*&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>340</y><w>200</w><h>110</h></coordinates><panel_attributes>Enemigo
+--
+dx: float
+velocidad: float
+--
+Enemigo(float x, float y, float dx)
+Mover() override: void
+Dibujar() override: void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>890</x><y>340</y><w>200</w><h>80</h></coordinates><panel_attributes>Castillo
+--
+
+--
+Castillo(float x, float y)
+Dibujar() override: void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>220</y><w>160</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>220</y><w>190</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;170;120</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>220</y><w>470</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;450;120</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>220</y><w>450</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>430;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>340</y><w>220</w><h>160</h></coordinates><panel_attributes>Arco
+--
+dx: float
+dy: float
+velocidad: float
+forma: char
+--
+Arco(float x, float y, float dx, float dy)
+MoverArco(): void
+DibujarArco(): void
+fueraDeLimite(): bool
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>410</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>820</y><w>220</w><h>260</h></coordinates><panel_attributes>Juego
+--
+castillo: Castillo*
+caballero: Caballero*
+enemigos: vector&lt;Enemigo*&gt;
+formaCorazon: char
+--
+Juego()
+~Juego()
+Iniciar(): void
+DibujarCorazones(int vidas): void
+BorrarCorazones(int vidas): void
+BorrarObjetos(): void
+MoverObjetos(): void
+DibujarObjetos(): void
+Colisiones(): void
+MostrarEstadisticas(): void
+JuegoTerminado(): bool
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>560</y><w>160</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>140;260;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>440</y><w>180</w><h>400</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=5</panel_attributes><additional_attributes>10;380;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>410</y><w>440</w><h>420</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;400;420;10</additional_attributes></element></diagram>

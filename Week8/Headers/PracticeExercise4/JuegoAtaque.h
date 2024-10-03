@@ -146,7 +146,7 @@ void Juego::Colisiones()
 				contadorHelicopteros++;
 
 				balas[j]->BorrarBala();
-				delete balas[j] ;
+				delete balas[j];
 				balas.erase(balas.begin() + j);
 				break;
 			}

@@ -30,14 +30,3 @@ void Pastilla::Dibujar()
 	}
 	Console::ResetColor();
 }
-
-//void Pastilla::Dibujar()
-//{
-//	for (int i = 0; i < ancho; i++)
-//	{
-//		for (int j = 0; j < alto; j++)
-//		{
-//			Console::SetCursorPosition(static_cast<int>(x) + j, static_cast<int>(y) + i); cout << forma;
-//		}
-//	}
-//}

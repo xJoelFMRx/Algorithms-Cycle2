@@ -1,7 +1,7 @@
 #pragma once
 #include "Utilidades.h"
 
-class Figura
+class Entidad
 {
 protected:
 	float x;
@@ -11,26 +11,26 @@ protected:
 	int color;
 
 public:
-	Figura(float x, float y, int ancho, int alto);
+	Entidad(float x, float y, int ancho, int alto);
 	void Borrar();
-	virtual void Dibujar();
 	virtual void Mover();
+	virtual void Dibujar();
 	float getX();
 	float getY();
 	int getAncho();
 	int getAlto();
 };
 
-Figura::Figura(float x, float y, int ancho, int alto)
+Entidad::Entidad(float x, float y, int ancho, int alto)
 {
-	this->ancho = ancho;
-	this->alto = alto;
 	this->x = x;
 	this->y = y;
+	this->ancho = ancho;
+	this->alto = alto;
 	color = 0;
 }
 
-void Figura::Borrar()
+void Entidad::Borrar()
 {
 	for (int i = 0; i < alto; i++)
 	{
@@ -42,26 +42,26 @@ void Figura::Borrar()
 	}
 }
 
-void Figura::Mover() {}
-
-void Figura::Dibujar() {}
-
-float Figura::getX()
+float Entidad::getX()
 {
 	return x;
 }
 
-float Figura::getY()
+float Entidad::getY()
 {
 	return y;
 }
 
-int Figura::getAlto()
+int Entidad::getAncho()
+{
+	return ancho;
+}
+
+int Entidad::getAlto()
 {
 	return alto;
 }
 
-int Figura::getAncho()
-{
-	return ancho;
-}
+void Entidad::Mover() {}
+
+void Entidad::Dibujar() {}

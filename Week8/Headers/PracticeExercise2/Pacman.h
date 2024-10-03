@@ -70,26 +70,3 @@ void Pacman::Mover()
 		}
 	}
 }
-
-//void Pacman::Mover()
-//{
-//	if (kbhit()) {
-//		char tecla = getch();
-//		tecla = toupper(tecla);
-//		switch (tecla)
-//		{
-//		case 'W': dx = 0; dy = -1; break;
-//		case 'S': dx = 0; dy = 1; break;
-//		case 'A': dx = -1; dy = 0; break;
-//		case 'D': dx = 1; dy = 0; break;
-//		}
-//	}
-//	if (x + dx < 0 || x + dx + ancho >= ANCHO_CONSOLA) {
-//		dx = 0;
-//	}
-//	if (y + dy < 0 || y + dy + alto >= ALTO_CONSOLA) {
-//		dy = 0;
-//	}
-//	x += dx;
-//	y += dy;
-//}
