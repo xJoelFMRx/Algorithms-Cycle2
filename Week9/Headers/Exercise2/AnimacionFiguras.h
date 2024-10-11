@@ -19,9 +19,6 @@ namespace Ejercicio2Semana9 {
 		MyForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: agregar c�digo de constructor aqu�
-			//
 			controladora = gcnew Controladora();
 		}
 
@@ -41,9 +38,6 @@ namespace Ejercicio2Semana9 {
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
-		/// <summary>
-		/// Variable del dise�ador necesaria.
-		/// </summary>
 		Controladora^ controladora;
 
 #pragma region Windows Form Designer generated code
