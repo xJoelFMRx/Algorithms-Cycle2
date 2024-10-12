@@ -630,7 +630,7 @@ private: System::Void buttonDibujar_Click(System::Object^ sender, System::EventA
 	// Verifica si hay un elemento seleccionado en el ComboBox
 	if (comboBoxElegFigura->SelectedItem == nullptr) {
 		MessageBox::Show("Por favor, seleccione una figura primero.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-		return; // Terminar el m�todo si no hay selecci�n
+		return; // Terminar el metodo si no hay seleccion
 	}
 
 	String^ selectedItem = comboBoxElegFigura->SelectedItem->ToString();
@@ -639,15 +639,15 @@ private: System::Void buttonDibujar_Click(System::Object^ sender, System::EventA
 
 	// Verificar que los campos de posicion X y Y no estan vacios
 	if (!Int32::TryParse(textBoxPosX->Text, x) || !Int32::TryParse(textBoxPosY->Text, y)) {
-		MessageBox::Show("Por favor, introduzca valores v�lidos para la posici�n X e Y.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-		return; // Terminar el m�todo si hay error
+		MessageBox::Show("Por favor, introduzca valores validos para la posicion X e Y.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		return; // Terminar el metodo si hay error
 	}
 
 	// Validacion segun el tipo de figura seleccionada
 	if (selectedItem == "Circulo") {
 		double radio;
 		if (!Double::TryParse(textBoxRCirculo->Text, radio) || radio <= 0) {
-			MessageBox::Show("Por favor, introduzca un valor v�lido para el radio.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show("Por favor, introduzca un valor valido para el radio.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			return;
 		}
 		Circulo* circulo = new Circulo(radio, x, y);
@@ -657,7 +657,7 @@ private: System::Void buttonDibujar_Click(System::Object^ sender, System::EventA
 	else if (selectedItem == "Rectangulo") {
 		double largo, ancho;
 		if (!Double::TryParse(textBoxL1Rectan->Text, largo) || !Double::TryParse(textBoxL2Rectan->Text, ancho) || largo <= 0 || ancho <= 0) {
-			MessageBox::Show("Por favor, introduzca valores v�lidos para el Lado 1 y Lado 2.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show("Por favor, introduzca valores validos para el Lado 1 y Lado 2.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			return;
 		}
 		Rectangulo* rectangulo = new Rectangulo(largo, ancho, x, y);
@@ -667,7 +667,7 @@ private: System::Void buttonDibujar_Click(System::Object^ sender, System::EventA
 	else if (selectedItem == "Cuadrado") {
 		double lado;
 		if (!Double::TryParse(textBoxLCuadrado->Text, lado) || lado <= 0) {
-			MessageBox::Show("Por favor, introduzca un valor v�lido para el lado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show("Por favor, introduzca un valor valido para el lado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			return;
 		}
 		Cuadrado* cuadrado = new Cuadrado(lado, x, y);
@@ -677,7 +677,7 @@ private: System::Void buttonDibujar_Click(System::Object^ sender, System::EventA
 	else if (selectedItem == "Elipse") {
 		double ejemayor, ejemenor;
 		if (!Double::TryParse(textBoxEjeMayor->Text, ejemayor) || !Double::TryParse(textBoxEjeMenor->Text, ejemenor) || ejemayor <= 0 || ejemenor <= 0) {
-			MessageBox::Show("Por favor, introduzca valores v�lidos para el eje mayor y menor.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show("Por favor, introduzca valores validos para el eje mayor y menor.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			return;
 		}
 		Elipse* elipse = new Elipse(ejemayor, ejemenor, x, y);
@@ -687,7 +687,7 @@ private: System::Void buttonDibujar_Click(System::Object^ sender, System::EventA
 	else if (selectedItem == "Linea") {
 		double longitud;
 		if (!Double::TryParse(textBoxLongLinea->Text, longitud) || longitud <= 0) {
-			MessageBox::Show("Por favor, introduzca un valor v�lido para la longitud.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show("Por favor, introduzca un valor valido para la longitud.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			return;
 		}
 		Linea* linea = new Linea(longitud, x, y);
