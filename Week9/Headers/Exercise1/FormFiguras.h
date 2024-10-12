@@ -635,16 +635,15 @@ private: System::Void buttonDibujar_Click(System::Object^ sender, System::EventA
 
 	String^ selectedItem = comboBoxElegFigura->SelectedItem->ToString();
 
-	// Variables para las coordenadas
 	int x, y;
 
-	// Verificar que los campos de posici�n X y Y no est�n vac�os
+	// Verificar que los campos de posicion X y Y no estan vacios
 	if (!Int32::TryParse(textBoxPosX->Text, x) || !Int32::TryParse(textBoxPosY->Text, y)) {
 		MessageBox::Show("Por favor, introduzca valores v�lidos para la posici�n X e Y.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		return; // Terminar el m�todo si hay error
 	}
 
-	// Validaci�n seg�n el tipo de figura seleccionada
+	// Validacion segun el tipo de figura seleccionada
 	if (selectedItem == "Circulo") {
 		double radio;
 		if (!Double::TryParse(textBoxRCirculo->Text, radio) || radio <= 0) {
@@ -695,7 +694,7 @@ private: System::Void buttonDibujar_Click(System::Object^ sender, System::EventA
 		arraylinea->agregarLinea(linea);
 	}
 
-	// Redraw the panel
+	// Redibujar el panel
 	panelDibujarFigura->Invalidate();
 }
 private: System::Void textBoxPosX_TextChanged(System::Object^ sender, System::EventArgs^ e) {
