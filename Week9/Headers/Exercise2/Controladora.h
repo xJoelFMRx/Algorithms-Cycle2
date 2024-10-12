@@ -101,7 +101,7 @@ void Controladora::DetectarColisiones()
 			if (!circulos[j]->isVisible())
 				continue;
 
-			// Usar las m�scaras para detectar colisiones
+			// Usar las mascaras para detectar colisiones
 			if (triangulos[i]->mascara().IntersectsWith(circulos[j]->mascara()))
 			{
 				triangulos[i]->setVisible(false);
